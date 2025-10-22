@@ -102,9 +102,14 @@ const toogleItem = (item, display) => {
 
 const navList = document.querySelector('.nav-items-list')
 const btnList = document.querySelector('.menu-icon')
+const listItems = document.querySelector('.nav-items-list')
 
 btnList.addEventListener('click', ()=> {
     toogleItem(navList, 'flex')
+})
+
+listItems.addEventListener('click', ()=> {
+    navList.style.display = 'none'
 })
 
 //----------------------------------------------------------------//
