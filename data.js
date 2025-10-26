@@ -1,5 +1,5 @@
-import Certificate from "./classes/certficate.js"
-import Profissional from "./classes/Profissional.js"
+import Certificate from "./classes/certficate.js";
+import Profissional from "./classes/profissionals.js";
 
 export const certificates = [
     new Certificate(
