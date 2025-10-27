@@ -85,6 +85,7 @@ nav{
     height: 70px;
     padding: 20px 5%;
     transition: 0.125s linear;
+    z-index: 1000;
 }
 
 nav:hover{
