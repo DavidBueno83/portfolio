@@ -204,7 +204,7 @@ const title = document.querySelector('.text-title')
 const titleTyper = new Typewriter(title, [
   "Desenvolvedor de Softwares",
   "Sites, Aplicativos, Servidores",
-  "Full-Stack"
+  "Domínio Full-Stack"
 ], 75, 50, 2000, false)
 
 const cursor = document.querySelector('.cursor')
