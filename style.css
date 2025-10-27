@@ -50,6 +50,8 @@ section h1{
 
 
 
+
+
 @media (min-width:1080px){
     button{
         transition: 0.15s linear;
@@ -182,13 +184,15 @@ nav:hover{
     justify-content: center;
     gap: 100px;
     height: 100vh;
-
 }
+
+
 
 .banner-text{
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 180px;
     gap: 35px;
     text-align: center;
 }
@@ -324,7 +328,7 @@ section h1{
     padding: 40px 10%;
     gap: 20px;
     display: flex;
-    align-items: center;
+    min-height: 450px;
 }
 
 .text-aboutme{
@@ -343,9 +347,10 @@ section h1{
 
     .apresentation{
         width: 800px;
-        justify-content: center;
-        align-items: center;
+        justify-content: start;
+        align-items: start;
         padding: 50px;
+        min-height: 300px;
     }
 
     section h1{
@@ -370,7 +375,10 @@ section h1{
     gap: 25px;
 }
 
+
 .certificate-card{
+    opacity: 0;
+    transform: translateX(-100px);
     border: 1px solid rgb(150, 255, 255);
     border-radius: 10px;
     padding: 15px;
@@ -381,6 +389,25 @@ section h1{
     gap: 10px;
     align-items: center;
     box-shadow: 0px 2px 5px  rgba(109, 255, 255, 0.3);
+}
+
+
+.hidden{
+    opacity: 0;
+}
+
+.show-left {
+  animation: toRigth 0.8s ease-out forwards;
+}
+
+@keyframes toRigth{
+    from {
+         opacity: 0;
+         transform: translateX(-200px);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .certificate-card h1{
@@ -440,6 +467,8 @@ section h1{
 }
 
 .profissional-card{
+    opacity: 0;
+    transform: translateX(-100px);
     border: 1px solid rgb(150, 255, 255);
     border-radius: 10px;
     padding: 15px;
@@ -556,4 +585,30 @@ section h1{
 
 footer{
     height: 400px;
+}
+
+.typewriter-cursor {
+  border-right: 3px solid #00ffc8;
+  animation: blinkCursor 0.8s steps(2) infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 50% { border-color: transparent; }
+  51%, 100% { border-color: #00ffc8; }
+}
+
+
+.show-type{
+animation-name: show;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show{
+    0%{
+        opacity: 0;
+    } 100%{
+        opacity: 1;
+    }
 }

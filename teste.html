@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden-left {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.8s ease-out;
+            background: #4caf50;
+            color: white;
+            padding: 40px;
+            width: 300px;
+            margin: 100px auto;
+            border-radius: 10px;
+            text-align: center;
+            }
+
+            /* Quando estiver visível */
+            .show-left {
+            opacity: 1;
+            transform: translateX(0);
+            }
+    </style>
+</head>
+<body>
+    <div style="height: 100vh; background: #eee;">
+  <h1>Role para baixo 👇</h1>
+</div>
+
+<div class="hidden-left" id="animada">
+  <h2>Div animada!</h2>
+  <p>Ela apareceu deslizando da esquerda 😎</p>
+</div>
+
+<div style="height: 100vh; background: #eee;"></div>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show-left');
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden-left');
+hiddenElements.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
